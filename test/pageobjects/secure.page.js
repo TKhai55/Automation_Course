@@ -1,16 +1,15 @@
-const { $ } = require('@wdio/globals')
-const Page = require('./page');
-
+import Page from './page.js';
 /**
  * sub page containing specific selectors and methods for a specific page
  */
+const FLASH_ALERT = '#flash';
 class SecurePage extends Page {
     /**
      * define selectors using getter methods
      */
     get flashAlert () {
-        return $('#flash');
+        return $(FLASH_ALERT);
     }
 }
 
-module.exports = new SecurePage();
+export default new SecurePage();
