@@ -1,0 +1,32 @@
+# Node modules
+node_modules/
+
+# Logs
+logs/
+*.log
+
+# Allure reports
+allure-results/
+allure-report/
+
+# VSCode settings (nếu dùng)
+.vscode/
+
+# dotenv config (nếu có secrets)
+.env
+
+# coverage (nếu dùng tools đo coverage)
+coverage/
+
+# system files (MacOS or others)
+.DS_Store
+
+# WebdriverIO outputs
+*.json
+*.tsbuildinfo
+
+# Npm debug log
+npm-debug.log*
+
+# IDE folders
+.idea/
