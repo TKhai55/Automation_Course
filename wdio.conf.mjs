@@ -1,3 +1,21 @@
+import { suites } from "./test.suite.js";
+//Get destination to run automation case
+const suiteArg = process.argv.find(arg => arg.startsWith('--suite='));
+const selectedSuite = suiteArg ? suiteArg.split('=')[1] : null;
+
+const specArg = process.argv.find(arg => arg.startsWith('--spec='));
+const selectedSpec = specArg ? specArg.split('=')[1] : null;
+
+let selectedSpecs;
+
+if (selectedSpec) {
+  selectedSpecs = [selectedSpec]; // Ưu tiên chạy 1 file nếu truyền --spec
+} else if (selectedSuite) {
+  selectedSpecs = suites[selectedSuite]; // Nếu không, chạy theo suite
+} else {
+  selectedSpecs = Object.values(suites).flat(); // Không truyền gì thì chạy hết
+}
+
 export const config = {
     //
     // ====================
@@ -20,9 +38,7 @@ export const config = {
     // The path of the spec files will be resolved relative from the directory of
     // of the config file unless it's absolute.
     //
-    specs: [
-        './test/specs/**/*.js'
-    ],
+    specs: selectedSpecs,
     // Patterns to exclude.
     exclude: [
         // 'path/to/excluded/files'

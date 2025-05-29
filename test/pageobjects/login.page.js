@@ -3,6 +3,8 @@ import Page from './page.js';
 const LOGIN_FIELD= "#username";
 const PASSWORD_FIELD= "#password";
 const LOGIN_BTN= 'button[type="submit"]';
+const FLASH_ALERT = '#flash';
+
 class LoginPage extends Page {
     get inputUsername() {
         return $(LOGIN_FIELD);
@@ -14,6 +16,10 @@ class LoginPage extends Page {
 
     get btnSubmit() {
         return $(LOGIN_BTN);
+    }
+
+    get flashAlert() {
+        return $(FLASH_ALERT);
     }
     
     async fillUsername (username) {
