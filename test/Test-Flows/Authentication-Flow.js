@@ -1,6 +1,5 @@
-import loginPage from "../pageobjects/login.page.js";
-import securePage from "../pageobjects/secure.page.js";
-
+import loginPage from "../../pageobjects/pages/login.page.js";
+import securePage from "../../pageobjects/pages/secure.page.js";
 class AuthenFlow {
 
     async openLoginPage() {
