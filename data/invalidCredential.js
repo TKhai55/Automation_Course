@@ -1,4 +1,4 @@
-const data = { 
+export default {
     username: 'tomsmith',
     password: 'SuperSecretPassword!',
     incorrectUsername: 'invalidUser',
@@ -6,5 +6,3 @@ const data = {
     expectedErrorNameMessage: 'Your username is invalid!',
     expectedErrorPassMessage: 'Your password is invalid!',
 }
-
-export default data;
