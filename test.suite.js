@@ -5,5 +5,8 @@ export const suites = {
   ],
   checkbox: [
     './test/Test-Specs/Checkbox/test.spec.js'
+  ],
+  addRemove: [
+    './test/Test-Specs/Add-Remove/test.spec.js',
   ]
 }
